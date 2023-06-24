@@ -1,0 +1,68 @@
+.main {
+  position: relative;
+}
+.main_partial {
+  padding: 1rem 1rem;
+}
+.main_partial_notice {
+  padding: 1rem 1rem 0.2rem;
+  display: flex;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  gap: 2rem;
+}
+#wishlist_table th:first-child {
+  width: 10%;
+}
+#wishlist_table th:nth-child(2) {
+  width: 15%;
+}
+#wishlist_table th:nth-child(3) {
+  width: 35%;
+}
+#courselist_table th:first-child {
+  width: 10%;
+}
+#courselist_table th:nth-child(2) {
+  width: 10%;
+}
+#courselist_table th:nth-child(3) {
+  width: 15%;
+}
+#courselist_table th:nth-child(4) {
+  width: 35%;
+}
+button {
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+}
+#wishlist_table .enter_button {
+  background-color: #18a6ba;
+  border: 1px solid #0b7d8b;
+}
+#courselist_table .del_button {
+  background-color: #2a7f24;
+  border: 1px solid #194c14;
+}
+
+.up_button,
+.down_button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 0.3rem;
+  margin-left: 4px;
+}
+hr {
+  height: 8px;
+  border: solid #e9e9e9;
+  background-color: #f4f4f4;
+  border-right: none;
+  border-left: none;
+}
+#credit,
+#score {
+  color: red;
+  font-weight: 500;
+}

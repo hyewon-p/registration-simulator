@@ -1,0 +1,89 @@
+td:first-child {
+  width: 10%;
+}
+td:nth-child(2) {
+  width: 15%;
+}
+td:nth-child(3) {
+  width: 40%;
+}
+td:nth-child(4) {
+  width: 10%;
+}
+td:nth-child(6) {
+  width: 10%;
+}
+.main_partial {
+  padding: 1rem 1rem;
+}
+button {
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+}
+#subject_table button {
+  background-color: #ffc000;
+  border: 1px solid #c49200;
+}
+#wishlist_table .del_button {
+  background-color: #2a7f24;
+  border: 1px solid #194c14;
+}
+hr {
+  height: 8px;
+  border: solid #e9e9e9;
+  background-color: #f4f4f4;
+  border-right: none;
+  border-left: none;
+}
+label {
+  font-size: 0.8rem;
+}
+input {
+  border: 1px solid #b9b9b9;
+  height: 1.4rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+}
+input::placeholder {
+  color: #b9b9b9;
+}
+select {
+  border: 1px solid #b9b9b9;
+  height: 1.7rem;
+  margin-left: 0.5rem;
+  padding: 0 0.3rem;
+}
+#main_partial_search {
+  border: 1px solid #d4d4d4;
+  border-radius: 0.4rem;
+  padding: 1rem 1.5rem;
+}
+
+#wishList_search {
+  background-color: #ff8430;
+  border: 1px solid #d97029;
+  padding: 0.5rem 0.6rem;
+  margin-left: 1rem;
+}
+#wishList_search svg {
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+button {
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+}
+.up_button,
+.down_button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 0.3rem;
+  margin-left: 4px;
+}
+.table_container {
+  max-height: 40vh;
+  overflow-y: scroll;
+}

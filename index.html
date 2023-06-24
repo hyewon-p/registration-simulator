@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모의수강신청</title>
+    <link
+      href="images/symbol-mark.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/help.css" />
+  </head>
+  <body>
+    <header>
+      <image width="auto" height="45%" src="images/symbol-mark.png" />
+      <div class="header_text">
+        <strong>이화여자대학교</strong><span>ewha womans university</span>
+      </div>
+    </header>
+    <div class="main">
+      <div class="main_left">
+        <h2>
+          don't walk <br />
+          when you can run
+        </h2>
+        <span>
+          실패를 두려워하지 않는 용기를 가지고,<br />
+          청춘은 마음껏 뛰놀기 바랍니다.
+        </span>
+      </div>
+      <div class="main_right">
+        <h4>모의 수강신청 시스템</h4>
+        <span
+          >course registration<br />
+          simulator</span
+        >
+        <form id="loginForm">
+          <input />
+          <input />
+          <button type="submit">
+            <strong>로그인</strong><span>Login</span>
+          </button>
+          <label
+            >수강신청 시작 시간<input name="limitTime" required type="time"
+          /></label>
+        </form>
+      </div>
+    </div>
+    <div class="help_container">
+      <div class="help">
+        <span class="help_title"> 공지사항 </span>
+        <div class="help_body">
+          <div style="height: 0.8rem"></div>
+          <li>
+            수강신청을 미리 경험해봄으로써 수강신청에 대한 부담을 줄이는 데에
+            도움을 주고자 제작되었습니다.
+          </li>
+          <li>
+            로그인은 실제 계정으로 이루어지지 않으니 아무 내용이나 입력하거나,
+            공백으로 남겨두어도 됩니다.
+          </li>
+          <li>
+            과목의 점수는 실제 수강신청의 경쟁률을 의미하므로, 점수가 높을수록
+            빠르게 마감됨에 유의해주시길 바랍니다.
+          </li>
+          <li>
+            입력한 시작 시간을 기준으로 수강신청의 성공 기준이 결정되므로,
+            기억하기 쉬운 단위로 입력하시거나, 잊어버리지 않도록 주의하시길
+            바랍니다.
+          </li>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

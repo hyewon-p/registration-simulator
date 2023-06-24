@@ -1,0 +1,51 @@
+.help_main {
+  padding: 2rem 1.4rem;
+}
+.help_main_image {
+  height: 18rem;
+  background-image: url("../images/campus.png");
+  background-size: cover;
+  background-position: 0% 93%;
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.help_main_image h2 {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  color: white;
+  font-weight: 600;
+  line-height: 95%;
+  margin-bottom: 0.8rem;
+}
+.help_main_image span {
+  color: white;
+  line-height: 160%;
+  font-size: 0.9rem;
+}
+.help {
+  margin-top: 3.2rem;
+}
+.help_title {
+  font-size: 1.8rem;
+}
+.help_body {
+  margin-top: 1.5rem;
+  border: 1px solid #dedede;
+  padding: 1.5rem 2.2rem 1rem;
+}
+.help_body strong {
+  font-size: 1.2rem;
+  display: block;
+  padding-top: 0.8rem;
+  padding-bottom: 1.2rem;
+}
+li::marker {
+  color: #2a6442;
+  content: ">";
+}
+.help_body li {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

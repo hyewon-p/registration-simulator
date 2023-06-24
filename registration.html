@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모의수강신청</title>
+    <link
+      href="images/symbol-mark.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/registration.css" />
+    <link rel="stylesheet" href="style/modal.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav_name">이화연</div>
+      <ul class="nav_menu">
+        <li onclick="location.href = './wishList.html'">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.5rem"
+            height="1.5rem"
+            fill="white"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M4.559 7l4.701-4.702c.198-.198.459-.298.72-.298.613 0 1.02.505 1.02 1.029 0 .25-.092.504-.299.711l-3.26 3.26h-2.882zm12 0h2.883l-4.702-4.702c-.198-.198-.459-.298-.72-.298-.613 0-1.02.505-1.02 1.029 0 .25.092.504.299.711l3.26 3.26zm3.703 4l-.016.041-3.598 8.959h-9.296l-3.597-8.961-.016-.039h16.523zm3.738-2h-24v2h.643c.535 0 1.021.304 1.256.784l4.101 10.216h12l4.102-10.214c.234-.481.722-.786 1.256-.786h.642v-2zm-14 5c0-.552-.447-1-1-1s-1 .448-1 1v3c0 .552.447 1 1 1s1-.448 1-1v-3zm3 0c0-.552-.447-1-1-1s-1 .448-1 1v3c0 .552.447 1 1 1s1-.448 1-1v-3zm3 0c0-.552-.447-1-1-1s-1 .448-1 1v3c0 .552.447 1 1 1s1-.448 1-1v-3z"
+            /></svg
+          ><span>장바구니</span><span>Wish List</span>
+        </li>
+        <li onclick="location.href = './registration.html'" class="active">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.5rem"
+            height="1.5rem"
+            fill="white"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M22 3v21h-20v-21h4.667l-2.667 2.808v16.192h16v-16.192l-2.609-2.808h4.609zm-3.646 4l-3.312-3.569v-.41c.001-1.668-1.352-3.021-3.021-3.021-1.667 0-3.021 1.332-3.021 3l.001.431-3.298 3.569h12.651zm-6.354-5c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-5 15h10v1h-10v-1zm0-1h10v-1h-10v1zm0-2h10v-1h-10v1zm0-2h10v-1h-10v1z"
+            /></svg
+          ><span>수강신청</span><span>Course Registration</span>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <image width="auto" height="60%" src="images/symbol-mark.png" />
+      <div class="header_text">
+        <strong>이화여자대학교</strong><span>ewha womans university</span>
+      </div>
+      <div></div>
+      <button onclick="location.href = './help.html'">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.4rem"
+          height="1.4rem"
+          fill="#7A7A7A"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"
+          />
+        </svg>
+      </button>
+      <button onclick="location.href = './index.html'">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.3rem"
+          height="1.3rem"
+          fill="#7A7A7A"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M8 10v-4c0-2.206 1.794-4 4-4 2.205 0 4 1.794 4 4v1h2v-1c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-13z"
+          />
+        </svg>
+      </button>
+    </header>
+    <div class="main">
+      <div id="myModal" class="modal">
+        <div class="modal_content_service">
+          <h2>서비스 접속 대기중입니다.</h2>
+          <div class="modal_content_service_time">
+            <span>예상대기시간:</span>
+            <strong>1</strong><span>초</span>
+          </div>
+
+          <hr />
+          <div class="modal_content_service_notice">
+            대기자는 없지만 잠시만 기다려주세요. <br />
+            잠시후 서비스로 자동 접속합니다.<br />
+
+            <strong>&#8251; 재접속하시면 대기시간이 더 길어집니다.</strong>
+          </div>
+          <!-- <div class="modal_content_title">
+            <div></div>
+            <span class="close" onclick="closeModal()">&times;</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="main_partial">
+        <div class="table_title">
+          <strong>장바구니조회/신청</strong>
+          <span>Wish List</span>
+        </div>
+        <table id="wishlist_table">
+          <tr>
+            <th>수강신청</th>
+            <th>학수번호</th>
+            <th>과목명</th>
+            <th>학점</th>
+            <th>강의시간</th>
+            <th>점수</th>
+            <th>정렬순서</th>
+          </tr>
+          <tr id="tr_11111-01">
+            <td>
+              <button class="enter_button">Enter</button>
+            </td>
+            <td class="course_code">11111-01</td>
+            <td>aaa</td>
+            <td>3</td>
+            <td>1교시</td>
+            <td>10</td>
+            <td>
+              <button id="up_button">↑</button
+              ><button id="down_button">↓</button>
+            </td>
+          </tr>
+          <tr id="tr_11112-01">
+            <td>
+              <button class="enter_button">Enter</button>
+            </td>
+            <td class="course_code">11112-01</td>
+            <td>bbb</td>
+            <td>3</td>
+            <td>1교시</td>
+            <td>10</td>
+            <td>
+              <button id="up_button">↑</button
+              ><button id="down_button">↓</button>
+            </td>
+          </tr>
+          <tr id="tr_11115-01">
+            <td>
+              <button class="enter_button">Enter</button>
+            </td>
+            <td class="course_code">11115-01</td>
+            <td>ccc</td>
+            <td>3</td>
+            <td>1교시</td>
+            <td>10</td>
+            <td>
+              <button id="up_button">↑</button
+              ><button id="down_button">↓</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <hr />
+      <div class="main_partial_notice">
+        <div>
+          <span>▣ 신청한 학점:</span>
+          <span id="credit">0</span>
+          <span>학점</span>
+        </div>
+        <div>
+          <span>▣ 총 점수:</span>
+          <span id="score">0</span>
+          <span>점</span>
+        </div>
+      </div>
+      <div class="main_partial">
+        <div class="table_title">
+          <strong>수강신청확정내역</strong>
+          <span>My Course List</span>
+        </div>
+        <table id="courselist_table">
+          <tr>
+            <th>No</th>
+            <th>수강삭제</th>
+            <th>학수번호</th>
+            <th>과목명</th>
+            <th>학점</th>
+            <th>강의시간</th>
+            <th>점수</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="scripts/variables.js"></script>
+    <script src="scripts/registration.js"></script>
+  </body>
+</html>

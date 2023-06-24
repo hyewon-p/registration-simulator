@@ -1,0 +1,128 @@
+body {
+  overflow-x: hidden;
+}
+header {
+  width: 100vw;
+  height: 5.5rem;
+  background-color: #00663f;
+  display: flex;
+  align-items: center;
+  padding-left: 7vw;
+}
+header img {
+  filter: brightness(0) invert(1);
+}
+.header_text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 1rem;
+  justify-content: center;
+}
+.header_text span {
+  text-transform: uppercase;
+  font-size: 0.4rem;
+}
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 5rem 7vw;
+  height: 75vh;
+  background-image: url("../images/campus.png");
+  background-size: cover;
+}
+h2 {
+  font-size: 4.2rem;
+}
+h4 {
+  font-size: 2rem;
+}
+
+.main_left h2 {
+  text-transform: uppercase;
+  color: #00663f;
+  font-weight: 600;
+  line-height: 95%;
+  margin-bottom: 1rem;
+}
+.main_left span {
+  color: #a4a4a4;
+  font-size: 1.4rem;
+  line-height: 160%;
+  letter-spacing: -0.1rem;
+}
+.main_right {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  margin-left: 2rem;
+  padding: 4rem 2rem;
+}
+.main_right h4 {
+  font-weight: 400;
+  color: #5c5c5c;
+  letter-spacing: -0.1rem;
+  word-break: keep-all;
+  word-wrap: break-word;
+  text-align: center;
+}
+.main_right form {
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  padding: 0 0.6rem;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.main_right button {
+  grid-area: 1 /2/ 3/ 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #ff8430;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.main_right strong {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.main_right > span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ababab;
+  text-transform: uppercase;
+  word-break: keep-all;
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: 0.7rem;
+  line-height: 110%;
+}
+.main_right form span {
+  font-size: 0.7rem;
+  font-weight: 200;
+  opacity: 0.7;
+}
+input {
+  border: 1px solid #b9b9b9;
+  height: 2.2rem;
+  background-color: #e9f0fd;
+  padding-left: 1.2rem;
+}
+#loginForm label {
+  margin-top: 0.5rem;
+  color: #5c5c5c;
+}
+#loginForm label input {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+.help_container {
+  padding: 1rem 8rem;
+}
