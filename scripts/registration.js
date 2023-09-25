@@ -17,8 +17,17 @@ http.open("GET", "./courses.json", false);
 http.send();
 var courses = JSON.parse(http.responseText);
 
+function getWishList() {
+  var globalwish = [];
+  if (localStorage.getItem("wishlist")) {
+    globalwish = localStorage.getItem("wishlist").split(",");
+  }
+  return globalwish;
+}
+
 function syncWishlist() {
-  var globalwish = localStorage.getItem("wishlist").split(",");
+  wishList = [];
+  var globalwish = getWishList();
   for (var wish of globalwish) {
     courses.find(function findCourse(e) {
       if (e.code == wish) {
@@ -27,6 +36,37 @@ function syncWishlist() {
       }
     });
   }
+}
+
+function getIndex(ele) {
+  var i = 0;
+  while ((ele = ele.previousSibling) != null) {
+    i++;
+  }
+  return i - 1;
+}
+
+function upButtonHandler() {
+  var wishListIndex = getIndex(this.parentElement.parentElement);
+  if (wishListIndex == 0) return;
+  var globalwish = getWishList();
+  var temp = globalwish[wishListIndex - 1];
+  globalwish[wishListIndex - 1] = globalwish[wishListIndex];
+  globalwish[wishListIndex] = temp;
+  localStorage.setItem("wishlist", globalwish);
+  drawWishlist();
+}
+
+function downButtonHandler() {
+  var wishListIndex = getIndex(this.parentElement.parentElement);
+  var globalwish = getWishList();
+  if (wishListIndex == globalwish.length - 1) return;
+  var temp = globalwish[wishListIndex + 1];
+  globalwish[wishListIndex + 1] = globalwish[wishListIndex];
+  globalwish[wishListIndex] = temp;
+  localStorage.setItem("wishlist", globalwish);
+  console.log(globalwish);
+  drawWishlist();
 }
 
 var wishlistHead =
@@ -54,6 +94,14 @@ function drawWishlist() {
 
   var wishTable = document.getElementById("wishlist_table");
   wishTable.innerHTML = wishlistHead + inner;
+  var upButtons = document.getElementsByClassName("up_button");
+  for (var button of upButtons) {
+    button.addEventListener("click", upButtonHandler);
+  }
+  var downButtons = document.getElementsByClassName("down_button");
+  for (var button of downButtons) {
+    button.addEventListener("click", downButtonHandler);
+  }
   for (var button of enterButtons) {
     button.addEventListener("click", openModal);
   }
@@ -162,12 +210,6 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// window.onclick = function (e) {
-//   if (e.target === modal) {
-//     closeModal();
-//   }
-// };
-
 var head =
   "<tr><th>No</th><th>수강삭제</th><th>학수번호</th><th>과목명</th><th>학점</th><th>강의시간</th><th>점수</th></tr>";
 
@@ -192,6 +234,7 @@ function drawCourselist() {
 
   var courseTable = document.getElementById("courselist_table");
   courseTable.innerHTML = head + inner;
+
   var delButtons = document.getElementsByClassName("del_button");
   for (var button of delButtons) {
     button.addEventListener("click", delCourse);
