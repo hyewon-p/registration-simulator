@@ -65,7 +65,6 @@ function downButtonHandler() {
   globalwish[wishListIndex + 1] = globalwish[wishListIndex];
   globalwish[wishListIndex] = temp;
   localStorage.setItem("wishlist", globalwish);
-  console.log(globalwish);
   drawWishlist();
 }
 
